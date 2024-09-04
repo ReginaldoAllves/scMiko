@@ -1193,9 +1193,9 @@ getExpressionMatrix <- function(so, only.variable = F, which.assay = NULL, which
     exp.mat.complete <- so@assays[[which.assay]]@scale.data
   } else if (which.data == "data"){
     if (as.dense){
-      exp.mat.complete <- as.matrix(so@assays[[which.assay]]@data)
+      exp.mat.complete <- as.matrix(so@assays[[which.assay]]@layers[["data"]])
     } else {
-      exp.mat.complete <- (so@assays[[which.assay]]@data)
+      exp.mat.complete <- (so@assays[[which.assay]]@layers[["data"]])
     }
 
   }
